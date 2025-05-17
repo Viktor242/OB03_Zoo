@@ -19,8 +19,7 @@ class Animal:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-        self.sound = None
-        self.food = None
+
 
     def make_sound(self):
         return f"{self.name} издает {self.sound} возраст {self.age}"
