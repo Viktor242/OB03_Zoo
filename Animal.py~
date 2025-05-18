@@ -1,0 +1,59 @@
+# 1. Создайте базовый класс `Animal`, который будет содержать общие атрибуты
+# (например, `name`, `age`) и методы (`make_sound()`, `eat()`) для всех животных.
+#
+# 2. Реализуйте наследование, создав подклассы `Bird`, `Mammal`, и `Reptile`,
+# которые наследуют от класса `Animal`. Добавьте специфические атрибуты и
+# переопределите методы, если требуется (например, различный звук для `make_sound()`).
+#
+# 3. Продемонстрируйте полиморфизм: создайте функцию `animal_sound(animals)`,
+# которая принимает список животных и вызывает метод `make_sound()` для каждого животного.
+
+
+class Animal:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.sound = None
+        self.food = None
+
+    def make_sound(self):
+        return f"{self.name} издает {self.sound} возраст {self.age}"
+
+    def make_eat(self):
+        return f"{self.name} ест {self.food}"
+
+class Bird(Animal):
+    def __init__(self, name, age, habitat):
+        super().__init__(name, age)
+        self.sound = "чирик-чирик!"
+        self.food = "зерна и насекомых"
+        self.habitat = "воздушная среда"
+
+    def make_sound(self):
+        return (f"{self.name} издает тыр-тыр! возраст {self.age}")
+
+class Mammal(Animal):
+    def __init__(self, name, age, habitat):
+        super().__init__(name, age)
+        self.sound = "мяу"
+        self.food = "корм"
+        self.habitat = "лес"
+
+class Reptile(Animal):
+    def __init__(self, name, age, habitat):
+        super().__init__(name, age)
+        self.sound = "Рык!"
+        self.food = "мясо"
+        self.habitat = "подземное"
+
+def animal_sound(animals):
+    print (animals.make_sound())
+
+animal_sound(Bird("Петух", 2, "воздушная среда"))
+animal_sound(Mammal("Кот", 2, "лес"))
+animal_sound(Reptile("Змея", 2, "подземное"))
+
+
+
+
+

@@ -1,0 +1,56 @@
+# 4. Используйте композицию для создания класса `Zoo`, который будет содержать
+# информацию о животных и сотрудниках. Должны быть методы для добавления животных и сотрудников в зоопарк.
+#
+# 5. Создайте классы для сотрудников, например, `ZooKeeper`, `Veterinarian`,
+# которые могут иметь специфические методы (например, `feed_animal()` для `ZooKeeper`
+# и `heal_animal()` для `Veterinarian`).
+class Zoo:
+    def __init__(self):
+        self.animals = []
+        self.employees = []
+
+    def add_animal(self, animal):
+        self.animals.append(animal)
+        print(f"Животное {animal.name} добавлено в зоопарк.")
+
+    def add_employee(self, employee):
+        self.employees.append(employee)
+        print(f"Сотрудник {employee.name} добавлен в зоопарк.")
+
+
+class ZooKeeper:
+    def __init__(self, name):
+        self.name = name
+
+    def feed_animal(self, animal, zoo):
+        if animal in zoo.animals:
+            print(f"Сотрудник {self.name} кормит животное {animal.name}.")
+
+
+class Veterinarian:
+    def __init__(self, name):
+        self.name = name
+
+    def heal_animal(self, animal, zoo):
+        if animal in zoo.animals:
+            print(f"Ветеринар {self.name} лечит животное {animal.name}.")
+
+
+my_Zoo = Zoo()
+zoo_keeper = ZooKeeper("Вася")  # Переименовал переменную, чтобы не перезаписывать класс
+veterinarian = Veterinarian("Коля")  # Аналогично
+
+# Теперь добавляем животных правильно (как объекты Animal)
+my_Zoo.add_animal(Animal("Петух"))
+my_Zoo.add_animal(Animal("Кот"))
+
+my_Zoo.add_employee(zoo_keeper)
+my_Zoo.add_employee(veterinarian)
+
+# сотрудник Кормим животных
+
+zoo_keeper.feed_animal(Animal("Кот"), my_Zoo)
+
+# Лечим животных
+veterinarian.heal_animal(Animal("Петух"), my_Zoo)
+veterinarian.heal_animal(Animal("Кот"), my_Zoo)

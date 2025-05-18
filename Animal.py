@@ -7,13 +7,7 @@
 #
 # 3. Продемонстрируйте полиморфизм: создайте функцию `animal_sound(animals)`,
 # которая принимает список животных и вызывает метод `make_sound()` для каждого животного.
-#
-# 4. Используйте композицию для создания класса `Zoo`, который будет содержать
-# информацию о животных и сотрудниках. Должны быть методы для добавления животных и сотрудников в зоопарк.
-#
-# 5. Создайте классы для сотрудников, например, `ZooKeeper`, `Veterinarian`,
-# которые могут иметь специфические методы (например, `feed_animal()` для `ZooKeeper`
-# и `heal_animal()` для `Veterinarian`).
+
 
 class Animal:
     def __init__(self, name, age):
@@ -35,6 +29,9 @@ class Bird(Animal):
         self.food = "зерна и насекомых"
         self.habitat = "воздушная среда"
 
+    def make_sound(self):
+        return (f"{self.name} издает тыр-тыр! возраст {self.age}")
+
 class Mammal(Animal):
     def __init__(self, name, age, habitat):
         super().__init__(name, age)
@@ -49,12 +46,14 @@ class Reptile(Animal):
         self.food = "мясо"
         self.habitat = "подземное"
 
+
 def animal_sound(animals):
     print (animals.make_sound())
 
 animal_sound(Bird("Петух", 2, "воздушная среда"))
 animal_sound(Mammal("Кот", 2, "лес"))
 animal_sound(Reptile("Змея", 2, "подземное"))
+
 
 
 

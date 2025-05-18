@@ -57,9 +57,6 @@ class Zoo:
             self.animals = [Animal(animal) for animal in data["animals"]]
             self.employees = [Employee(emp) for emp in data["employees"]]
             print(f"Данные зоопарка загружены из файла {filename}")
-        else:
-            print(f"Файл {filename} не найден.")
-
 
 # Кормление животных
 class ZooKeeper(Employee):  # Наследуем от Employee
