@@ -45,8 +45,8 @@ class Zoo:
             "animals": [animal.name for animal in self.animals],
             "employees": [emp.name for emp in self.employees]
         }
-        with open(filename, 'w', encoding='utf-8') as f:  # Указываем кодировку UTF-8
-            json.dump(data, f, indent=4, ensure_ascii=False)  # Отключаем преобразование в ASCII
+        with open(filename, 'w') as f:
+            json.dump(data, f, indent=4)
         print(f"Данные зоопарка сохранены в файл {filename}")
 
     def load_data(self, filename="my_zoo1"):
