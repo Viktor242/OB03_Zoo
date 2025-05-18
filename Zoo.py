@@ -39,7 +39,7 @@ class Zoo:
         self.employees.append(employee)
         print(f"Сотрудник {employee.name} добавлен в зоопарк.")
 
-    def save_data(self, filename="my_zoo"):
+    def save_data(self, filename="my_zoo1"):
         """Сохраняет данные зоопарка в файл"""
         data = {
             "animals": [animal.name for animal in self.animals],
@@ -49,7 +49,7 @@ class Zoo:
             json.dump(data, f, indent=4)
         print(f"Данные зоопарка сохранены в файл {filename}")
 
-    def load_data(self, filename="my_zoo"):
+    def load_data(self, filename="my_zoo1"):
         """Загружает данные зоопарка из файла"""
         if os.path.exists(filename):
             with open(filename, 'r') as f:
