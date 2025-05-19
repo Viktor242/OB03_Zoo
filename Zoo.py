@@ -9,7 +9,6 @@
 # о зоопарке в файл и возможность её загрузки, чтобы у вашего зоопарка было "постоянное состояние"
 # между запусками программы.
 
-
 import json
 import os
 
@@ -43,7 +42,9 @@ class Zoo:
         """Сохраняет данные зоопарка в файл"""
         data = {
             "animals": [animal.name for animal in self.animals],
-            "employees": [emp.name for emp in self.employees]
+            "employees": [emp.name for emp in self.employees],
+            "Keeper": keeper.name,
+            "Veterinarian": veterinarian.name
         }
         with open(filename, 'w', encoding='utf-8') as f:  # Указываем кодировку UTF-8
             json.dump(data, f, indent=4, ensure_ascii=False)  # Отключаем преобразование в ASCII

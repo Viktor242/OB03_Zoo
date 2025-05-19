@@ -8,7 +8,7 @@
 # 3. Продемонстрируйте полиморфизм: создайте функцию `animal_sound(animals)`,
 # которая принимает список животных и вызывает метод `make_sound()` для каждого животного.
 
-
+# Базовый класс
 class Animal:
     def __init__(self, name, age):
         self.name = name
@@ -16,12 +16,14 @@ class Animal:
         self.sound = None
         self.food = None
 
+# Подклассы и переопределение методов
     def make_sound(self):
         return f"{self.name} издает {self.sound} возраст {self.age}"
 
     def make_eat(self):
         return f"{self.name} ест {self.food}"
 
+# Добавлен атрибут habitat
 class Bird(Animal):
     def __init__(self, name, age, habitat):
         super().__init__(name, age)
@@ -29,9 +31,11 @@ class Bird(Animal):
         self.food = "зерна и насекомых"
         self.habitat = "воздушная среда"
 
+# Переопределение метода звука для птиц
     def make_sound(self):
         return (f"{self.name} издает тыр-тыр! возраст {self.age}")
 
+# Добавлен атрибут habitat
 class Mammal(Animal):
     def __init__(self, name, age, habitat):
         super().__init__(name, age)
@@ -39,6 +43,7 @@ class Mammal(Animal):
         self.food = "корм"
         self.habitat = "лес"
 
+# Добавлен атрибут habitat
 class Reptile(Animal):
     def __init__(self, name, age, habitat):
         super().__init__(name, age)
@@ -46,10 +51,11 @@ class Reptile(Animal):
         self.food = "мясо"
         self.habitat = "подземное"
 
-
+# Полиморфизм
 def animal_sound(animals):
     print (animals.make_sound())
 
+# Пример использования
 animal_sound(Bird("Петух", 2, "воздушная среда"))
 animal_sound(Mammal("Кот", 2, "лес"))
 animal_sound(Reptile("Змея", 2, "подземное"))
