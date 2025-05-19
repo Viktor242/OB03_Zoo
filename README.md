@@ -49,22 +49,3 @@ Python 3.6+
 # Как запустить
 Скопируйте код в файл zoo.py
 Запустите: python zoo.py
-
-## Пример использования
-
-```python
-my_Zoo = Zoo()
-
-# Добавление
-my_Zoo.add_animal("Лев")
-my_Zoo.add_employee("Иван")
-
-# Операции
-keeper = ZooKeeper("Иван")
-keeper.feed_animal("Лев", my_Zoo)
-
-# Сохранение/загрузка
-my_Zoo.save_data()
-my_Zoo.load_data()
-Требования
-Python 3.6+
