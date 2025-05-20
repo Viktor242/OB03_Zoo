@@ -1,0 +1,39 @@
+{
+    "animals": [
+        {
+            "type": "Mammal",
+            "name": "Кот",
+            "age": 3,
+            "habitat": "Unknown"
+        },
+        {
+            "type": "Mammal",
+            "name": "Собака",
+            "age": 5,
+            "habitat": "Unknown"
+        },
+        {
+            "type": "Reptile",
+            "name": "Лиса",
+            "age": 2,
+            "habitat": "лес"
+        }
+    ],
+    "employees": [
+        {
+            "type": "Employee",
+            "name": "Гоша",
+            "age": 50
+        },
+        {
+            "type": "ZooKeeper",
+            "name": "Виталик",
+            "age": 30
+        },
+        {
+            "type": "Veterinarian",
+            "name": "Василиса",
+            "age": 25
+        }
+    ]
+}
