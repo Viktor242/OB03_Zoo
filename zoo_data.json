@@ -7,16 +7,16 @@
             "habitat": "Unknown"
         },
         {
-            "type": "Mammal",
-            "name": "Собака",
+            "type": "Reptile",
+            "name": "Крокодил",
             "age": 5,
-            "habitat": "Unknown"
+            "habitat": "Ферма"
         },
         {
-            "type": "Reptile",
-            "name": "Лиса",
+            "type": "Bird",
+            "name": "Воробей",
             "age": 2,
-            "habitat": "лес"
+            "habitat": "Unknown"
         }
     ],
     "employees": [

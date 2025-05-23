@@ -110,7 +110,7 @@ class Zoo:
 
 class ZooKeeper(Employee):
     def feed_animal(self):
-        print(f"{self.name} кормит животное.")
+        print(f"{self.animal.name} кормит животное.")
 
 class Veterinarian(Employee):
     def feed_animal(self):
@@ -124,16 +124,16 @@ my_Zoo = Zoo()
 
 # Добавление животных (корректные объекты, без проверок)
 my_Zoo.add_animal(Mammal("Кот", 3))
-my_Zoo.add_animal(Mammal("Собака", 5))
-my_Zoo.add_animal(Reptile("Лиса", 2, "лес"))
+my_Zoo.add_animal(Reptile("Крокодил", 5,"Ферма"))
+my_Zoo.add_animal(Bird("Воробей", 2))
 
 # Добавление сотрудников
 
 zookeeper = ZooKeeper("Виталик", 30)
 veterinarian = Veterinarian("Василиса", 25)
 
-new_vet = Veterinarian("Доктор Айболит", 50)
-my_Zoo.add_employee(new_vet)
+new_employee = Employee("Гоша", 50)
+my_Zoo.add_employee(new_employee)
 
 my_Zoo.add_employee(zookeeper)
 my_Zoo.add_employee(veterinarian)

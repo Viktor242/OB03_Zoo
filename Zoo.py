@@ -124,8 +124,8 @@ my_Zoo = Zoo()
 
 # Добавление животных (корректные объекты, без проверок)
 my_Zoo.add_animal(Mammal("Кот", 3))
-my_Zoo.add_animal(Mammal("Собака", 5))
-my_Zoo.add_animal(Reptile("Лиса", 2, "лес"))
+my_Zoo.add_animal(Reptile("Крокодил", 5,"Ферма"))
+my_Zoo.add_animal(Bird("Воробей", 2))
 
 # Добавление сотрудников
 
